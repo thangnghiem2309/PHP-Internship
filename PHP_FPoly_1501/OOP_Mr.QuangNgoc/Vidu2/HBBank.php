@@ -1,0 +1,31 @@
+<?php
+class HBBank extends BankAbstract
+{
+    public function napTien($sotien)
+    {
+        $this ->sodu += $sotien;
+    }
+    public function ruttien($sotien)
+    {
+        if ($sotien < $this->sodu) 
+        {
+            $this->sodu -= $sotien;
+            echo "<br>$this->hoten vừa thực hiện rút tiền thành công";
+            echo "<br>số dư trong tài khoản là $this->sodu";
+        }
+    }
+    public function chuyentien($sotien, $nguoinhan)
+    {
+        if ($sotien < $this->sodu) 
+        {
+            $this->sodu -= $sotien;
+            $nguoinhan->sodu += $sotien;
+            echo "<br>$this->hoten vừa thực hiện chuyển tiền thành công tới $nguoinhan->hoten số tiền $sotien";
+            echo "<br>số dư trong tài khoản là $this->sodu";
+        } 
+        else 
+        {
+            echo "Số dư tài khoản không đủ";
+        }
+    }
+}
