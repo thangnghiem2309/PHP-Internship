@@ -1,0 +1,18 @@
+{
+    "name": "thangnghiem/mvcoop",
+    "autoload": {
+        "psr-4": {
+            "Thangnghiem\\Mvcoop\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thangnghiem2309",
+            "email": "duythang23092002@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "~1.6",
+        "eftec/bladeone": "4.9"
+    }
+}
